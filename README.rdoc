@@ -21,7 +21,10 @@ SQLite
 04 Formularios, validaciones
   + Form Helpers
   + validaciones
-
+05 Gemas, subir archivos
+  + gemas y carrierwave (13)
+  + agregar columnas a la base  de datos
+  + uploaders de carrierwave
 
 
 
@@ -40,3 +43,4 @@ SQLite
 10. rake db:migrate – Migrate the database through scripts in db/migrate folder.
 11. rake db:reset – Drops and recreates the database from db/schema.rb for the current environment.
 12. rake doc:app – Build the RDOC HTML Files
+13. bundle install - Updates the gems based in the Gemfile file
