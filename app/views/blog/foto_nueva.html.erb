@@ -1,0 +1,15 @@
+<h1>Foto nueva:</h1>
+<%=form_tag :action => 'guardar_foto' do%>
+
+   <p>
+	  <label for='foto_titulo'>Título</label>
+	  <br/>
+	  <%= text_field 'foto', 'titulo'%>
+	</p>
+	   <p>
+	  <label for='foto_descripcion'>Descripción</label>
+	  <br/>
+	  <%= text_area 'foto', 'descripcion'%>
+	</p>
+       <%= submit_tag "Enviar" %>
+<%end%>
