@@ -25,7 +25,9 @@ SQLite
   + gemas y carrierwave (13)
   + agregar columnas a la base  de datos
   + uploaders de carrierwave
-
+06 Plantillas, flash
+  + Layouts
+  + flash[:notice]
 
 
 
