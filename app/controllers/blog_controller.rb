@@ -1,5 +1,5 @@
 class BlogController < ApplicationController
-def index
-	@mensaje = "Hola mundo"
-end
+	def index
+		@fotos = Foto.all
+	end
 end

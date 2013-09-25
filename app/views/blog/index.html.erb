@@ -1,2 +1,9 @@
-<h1>index</h1>
-<%= @mensaje %>
+<p>Listado</p>
+<ul>
+	<% for foto in @fotos %>	
+		<li>
+			<h3><%= foto.titulo %></h3>
+			<p><%= foto.descripcion %></p> 	
+		</li>
+	<% end %>
+</ul>

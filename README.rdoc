@@ -6,9 +6,35 @@ ruby 1.9.3p448
 SQLite
 
 01 Creando un proyecto
-  + crear un proyecto en rails desde la consola
+  + crear un proyecto en rails desde la consola (1)
 02 Configuración inicial, controlador y vistas
   + routes.rb
-  + Controladores
+  + Controladores (3)
   + Vistas
-  + Servidor de aplicación
+  + Servidor de aplicación (6)
+03 Modelo, acceso a datos
+  + crear un modelo (2)
+  + crear base de datos (8)
+  + migraciones(4)
+  + consola (7)
+  + impresión de datos
+
+
+
+
+
+
+  Listado de comandos
+
+1.  rails new ApplicationName – Create a new application
+2.  rails generate/g model ModelName – Creates a model with the specified model_name
+3.  rails generate/g controller ControllerName – Creates a controller with the specified controller_name
+4.  rails generate/g migration MigrationName – Creates a migration with the specified migration_name
+5.  rails destroy controller ControllerName – Destroys the created controller and its related file. Same way you can destroy your model, migration files etc.
+6.  rails server/s – start ruby server at http://localhost:3000
+7.  rails console/c – Opens the rails console for the current RAILS_ENV
+8.  rake db:create – Create the database defined in config/database.yml for the current RAILS_ENV
+9.  rake db:drop – Drops the database for the current RAILS_ENV
+10. rake db:migrate – Migrate the database through scripts in db/migrate folder.
+11. rake db:reset – Drops and recreates the database from db/schema.rb for the current environment.
+12. rake doc:app – Build the RDOC HTML Files
