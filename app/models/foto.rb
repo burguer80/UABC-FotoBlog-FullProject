@@ -21,7 +21,7 @@ end
 def self.otro
 		Prawn::Document.generate("pdf/otro.pdf", 
 							  :page_layout => :landscape,
-							  :template => "#{Rails.root}/utils/prawnmanual.pdf") do
+							  :template => "#{Rails.root}/constancias/constancia.pdf") do
     	#image "#{Rails.root}/constancias/constancia.jpg", :at => [-35, 577]
     	text 	  "desde otro pdf"
 		#start_new_page
