@@ -23,10 +23,15 @@ def self.otro
 							  :page_layout => :landscape,
 							  :template => "#{Rails.root}/constancias/constancia.pdf") do
     	#image "#{Rails.root}/constancias/constancia.jpg", :at => [-35, 577]
-    	text 	  "desde otro pdf"
+    	#move_cursor_to 300, 300
+    	#font_size(30)
+    	font("Helvetica", :size => 30)
+    	text_box("Miraaaaa",
+           :at => [0, 262], :align => :center)
+    	#text 	  "desde otro pdf"
 		#start_new_page
-		text "See. We've left the previous page behind.", :color => "FF9900"
-		text_box "F.", :kerning => true,  :at => [500, y - 10]
+		#text "See. We've left the previous page behind.", :color => "FF9900"
+		#text_box "F.", :kerning => true,  :at => [500, y - 10]
 	end	
 	
 end
