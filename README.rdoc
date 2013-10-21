@@ -34,6 +34,10 @@ SQLite
   + Atributos virtuales
   + Digestion de cadenas
   + Registro
+08 Bases de datos relacionales
+  + Relacion uno a muchos
+  + Variables de sesion
+
 
 
 ===Listado de comandos

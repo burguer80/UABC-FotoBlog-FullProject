@@ -30,6 +30,7 @@ class BlogController < ApplicationController
     if @usuario.save
       flash[:notice] = "Bienvenido: #{@usuario.nombre}"
       redirect_to :action => 'foto_nueva'
+      session[:usuario] = @usuario.id
   else
       @usuario.salt = ''
       flash[:notice] = "Los campos son obligatorios; Correo ya existe"
