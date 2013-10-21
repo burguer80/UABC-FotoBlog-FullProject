@@ -22,5 +22,19 @@ class BlogController < ApplicationController
   def registro 
     @usuario = Usuario.new
   end
+
+  def crear_usuario
+    @usuario = Usuario.new(params[:usuario])
+    #<----atributo virtual------------->
+    @usuario.contrasena = params[:usuario][:salt] 
+    if @usuario.save
+      flash[:notice] = "Bienvenido: #{@usuario.nombre}"
+      redirect_to :action => 'foto_nueva'
+  else
+      @usuario.salt = ''
+      flash[:notice] = "Los campos son obligatorios; Correo ya existe"
+      render :action => 'registro'
+    end
+  end
   
 end
