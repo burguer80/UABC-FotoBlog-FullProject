@@ -39,4 +39,20 @@ class BlogController < ApplicationController
     end
   end
   
+  def login    
+     if request.post?
+       usuario = Usuario.autenticar(params[:usuario][:email], params[:usuario][:salt])
+         if not usuario.nil?
+           session[:usuario] = usuario.id
+           redirect_to :action => 'foto_nueva' 
+         else
+           @usuario = Usuario.new
+           flash[:notice] = 'usuario no valido o la clave es incorrecta'
+         end
+     else
+       @usuario = Usuario.new
+     end
+
+ end
+
 end
