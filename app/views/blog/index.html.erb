@@ -5,7 +5,8 @@
 		<li>
 			<h3><%= foto.titulo %></h3>
 			<%= image_tag foto.imagen_url.to_s %>
-			<p><%= foto.descripcion %></p> 	
+			<p><%= foto.descripcion %></p>
+			<i><%= foto.usuario.nombre%></i> 	
 		</li>
 	<% end %>
 </ul>

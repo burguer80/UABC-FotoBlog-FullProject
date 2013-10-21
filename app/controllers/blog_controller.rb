@@ -10,7 +10,8 @@ class BlogController < ApplicationController
 
   def guardar_foto
   	@foto = Foto.new(params[:foto])
-  	if @foto.save
+    usuario = Usuario.find(session[:usuario])
+  	if usuario.fotos << @foto
   		flash[:notice] = "Se ha cargado correctamente tu foto"
     	redirect_to :action => 'index'
 	else
@@ -28,8 +29,9 @@ class BlogController < ApplicationController
     #<----atributo virtual------------->
     @usuario.contrasena = params[:usuario][:salt] 
     if @usuario.save
+      session[:usuario] = @usuario.id
       flash[:notice] = "Bienvenido: #{@usuario.nombre}"
-      redirect_to :action => 'foto_nueva'
+      redirect_to :action => 'foto_nueva'      
   else
       @usuario.salt = ''
       flash[:notice] = "Los campos son obligatorios; Correo ya existe"
