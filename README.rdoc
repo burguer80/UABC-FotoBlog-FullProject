@@ -31,8 +31,9 @@ SQLite
 07 Usuarios
   + Crear el modelo usuario (2)
   + Migrar y restablecer la base de datos (10), (11)
-  + ??crear un usuario en consola y dar de alta todas las fotos con ese id
-     Restablecer
+  + Atributos virtuales
+  + Digestion de cadenas
+  + Registro
 
 
 ===Listado de comandos
