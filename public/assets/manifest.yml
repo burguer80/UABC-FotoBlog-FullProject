@@ -1,0 +1,11 @@
+---
+ninja.jpg: ninja-afe8cf5d2c2c0cd037167cc45543935d.jpg
+ninja/index.jpg: ninja-afe8cf5d2c2c0cd037167cc45543935d.jpg
+rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
+rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
+application.js: application-2a4459ba21fae1f7572c3bbd0ce067da.js
+application/index.js: application-2a4459ba21fae1f7572c3bbd0ce067da.js
+application.css: application-1b13569e9620782f423d4cd3ce931750.css
+application/index.css: application-1b13569e9620782f423d4cd3ce931750.css
+jquery.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
+jquery/index.min.map: jquery.min-6336c5bca4c709e809647cdfcb484d0a.map
