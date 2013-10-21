@@ -16,7 +16,11 @@ class BlogController < ApplicationController
 	else
 		flash[:notice] = "Titulo y foto son obligatorios"
 		render :action => 'foto_nueva'
-	end
+	  end
   end	
+
+  def registro 
+    @usuario = Usuario.new
+  end
   
 end

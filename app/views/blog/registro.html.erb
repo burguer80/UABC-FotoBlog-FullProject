@@ -1,0 +1,20 @@
+<h1>Reg&iacute;strate:</h1>
+<%=form_tag :action => :guardar_foto do%>
+
+    <p>
+	  <label for="usuario_nombre">Nombre</label>
+	  <br/>
+	  <%= text_field 'usuario', 'nombre'%>
+	</p>
+	<p>
+	  <label for="usuario_email">Email</label>
+	  <br/>
+	  <%= text_field 'usuario', 'email'%>
+	</p> 
+	<p>
+	  <label for="usuario_salt">Contrase&ntilde;a</label>
+	  <br/>
+	  <%= text_field 'usuario', 'salt'%>
+	</p> 	  
+       <%= submit_tag "Registrar" %>
+<%end%>

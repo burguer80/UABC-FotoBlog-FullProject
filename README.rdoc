@@ -28,11 +28,14 @@ SQLite
 06 Plantillas, flash
   + Layouts
   + flash[:notice]
+07 Usuarios
+  + Crear el modelo usuario (2)
+  + Migrar y restablecer la base de datos (10), (11)
+  + ??crear un usuario en consola y dar de alta todas las fotos con ese id
+     Restablecer
 
 
-
-  Listado de comandos
-
+===Listado de comandos
 1.  rails new ApplicationName – Create a new application
 2.  rails generate/g model ModelName – Creates a model with the specified model_name
 3.  rails generate/g controller ControllerName – Creates a controller with the specified controller_name
