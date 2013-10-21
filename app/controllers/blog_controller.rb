@@ -16,7 +16,25 @@ class BlogController < ApplicationController
 	else
 		flash[:notice] = "Titulo y foto son obligatorios"
 		render :action => 'foto_nueva'
-	end
+	  end
   end	
+
+  def registro 
+    @usuario = Usuario.new
+  end
+
+  def crear_usuario
+    @usuario = Usuario.new(params[:usuario])
+    #<----atributo virtual------------->
+    @usuario.contrasena = params[:usuario][:salt] 
+    if @usuario.save
+      flash[:notice] = "Bienvenido: #{@usuario.nombre}"
+      redirect_to :action => 'foto_nueva'
+  else
+      @usuario.salt = ''
+      flash[:notice] = "Los campos son obligatorios; Correo ya existe"
+      render :action => 'registro'
+    end
+  end
   
 end
