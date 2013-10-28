@@ -1,6 +1,6 @@
 class BlogController < ApplicationController
   #<--valida excepto el login------------------->
-  before_filter :valida_autentificacion, :except => [:login, :index]
+  before_filter :valida_autentificacion, :except => [:login, :index, :registro, :crear_usuario]
   #<--protege los metodos criticos------------------->
   skip_before_filter :valida_autentificacion!, :except => [:foto_nueva, :guardar_foto]
   
