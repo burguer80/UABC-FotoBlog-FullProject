@@ -1,0 +1,15 @@
+<H2>Login</H2>
+<%= form_tag :action => :login do %>
+    <p>
+	  <label for="usuario_email">Email</label>
+	  <br/>
+	  <%= text_field 'usuario', 'email' %>
+
+	<p>
+	  <label for="usuario_salt">Contrase&ntilde;a</label>
+	  <br/>
+	  <%= password_field 'usuario', 'salt'%>
+	</p>            	
+	<%= submit_tag 'Entrar'%>
+	<%= link_to 'Registrate', :action => 'registro'%>	
+<%end%>

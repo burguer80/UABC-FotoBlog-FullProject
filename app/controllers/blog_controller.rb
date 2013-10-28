@@ -1,4 +1,8 @@
 class BlogController < ApplicationController
+  #<--valida excepto el login------------------->
+  before_filter :valida_autentificacion, :except => [:login, :index, :registro, :crear_usuario]
+  #<--protege los metodos criticos------------------->
+  skip_before_filter :valida_autentificacion!, :except => [:foto_nueva, :guardar_foto]
   
   def index
 		@fotos = Foto.all
@@ -39,4 +43,31 @@ class BlogController < ApplicationController
     end
   end
   
+  def login    
+     if request.post?
+       usuario = Usuario.autenticar(params[:usuario][:email], params[:usuario][:salt])
+         if not usuario.nil?
+           session[:usuario] = usuario.id
+           redirect_to :action => 'foto_nueva' 
+         else
+           @usuario = Usuario.new
+           flash[:notice] = 'usuario no valido o la clave es incorrecta'
+         end
+     else
+       @usuario = Usuario.new
+     end
+
+ end
+
+ def logout
+       session[:usuario] = nil
+       redirect_to :action => 'login'
+ end
+
+ def valida_autentificacion
+       unless session[:usuario]
+         redirect_to :action => "login"
+       end
+end
+
 end

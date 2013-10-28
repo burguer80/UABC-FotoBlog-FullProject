@@ -9,4 +9,13 @@ class Usuario < ActiveRecord::Base
   	salt = [Array.new(56){rand(256).chr}.join].pack("m").chomp
 	self.salt, self.hass = salt, Digest::SHA256.hexdigest(secreto + salt)  
   end
+
+  def self.autenticar(email, secreto) 
+     usuario = Usuario.find(:first, :conditions => ['email = ?', email]) 
+	   if usuario.blank? || Digest::SHA256.hexdigest(secreto + usuario.salt) != usuario.hass
+	     usuario = nil
+	   else
+	     usuario    
+	   end
+  end
 end
