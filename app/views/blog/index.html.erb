@@ -1,12 +1,16 @@
-<p>Listado</p>
-<%= link_to 'Nueva foto', :action => 'foto_nueva' %>
-<ul>
-	<% for foto in @fotos %>	
-		<li>
-			<h3><%= foto.titulo %></h3>
-			<%= image_tag foto.imagen_url.to_s %>
-			<p><%= foto.descripcion %></p>
-			<i><%= foto.usuario.nombre%></i> 	
-		</li>
-	<% end %>
+<%= link_to 'Nueva foto', {:action => 'foto_nueva'}, :class => 'btn btn-primary btn-large' %>
+
+
+<ul class="thumbnails">
+<% for foto in @fotos %>
+	  <li class="span4">
+	    <div class="thumbnail">
+	      <h3><%= foto.titulo %></h3>
+	      <%= image_tag foto.imagen_url.to_s, :class => 'img-rounded' %>
+	      <p><%= foto.descripcion %></p>
+		  <i class="icon-user"></i>
+		  <i><%= foto.usuario.nombre%></i>
+	    </div>
+	  </li>
+  <% end %>
 </ul>

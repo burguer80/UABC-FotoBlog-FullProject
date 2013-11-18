@@ -43,6 +43,9 @@ SQLite
   + Autentificacion
   + Proteccion de metodos
   + Ajustes de Login
+10 Estilos
+  + Configuración
+  + Ajustes, navbar
 
 
 
