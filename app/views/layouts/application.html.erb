@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<%=  link_to 'Blog', :action => 'index'%>
       <%if flash[:notice]%>
-                <h4><%=flash[:notice]%></h4>
+        <div class="alert">
+           <h4><%=flash[:notice] + '!'%></h4>
+        </div>             
       <%end%>
-
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
