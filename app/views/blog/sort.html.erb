@@ -1,0 +1,8 @@
+<h1>Fotos</h1>
+<ul id="fotos">
+		<% for foto in @fotos %>
+			<%= content_tag_for :li, foto do %>
+			<%= link_to	foto.titulo, :id => foto %>
+			<% end -%>	
+		<% end -%>			
+</ul>

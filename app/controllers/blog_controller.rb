@@ -1,8 +1,8 @@
 class BlogController < ApplicationController
   #<--valida excepto el login------------------->
-  before_filter :valida_autentificacion, :except => [:login, :index, :registro, :crear_usuario]
+  #before_filter :valida_autentificacion, :except => [:login, :index, :registro, :crear_usuario]
   #<--protege los metodos criticos------------------->
-  skip_before_filter :valida_autentificacion!, :except => [:foto_nueva, :guardar_foto]
+  #skip_before_filter :valida_autentificacion!, :except => [:foto_nueva, :guardar_foto]
   
   def index
 		@fotos = Foto.all
@@ -69,5 +69,12 @@ class BlogController < ApplicationController
          redirect_to :action => "login"
        end
 end
+
+#------sortable
+
+def sort
+  @fotos = Foto.all
+end
+
 
 end
