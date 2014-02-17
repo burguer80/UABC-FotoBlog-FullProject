@@ -14,8 +14,9 @@ class BlogController < ApplicationController
 
   def guardar_foto
   	@foto = Foto.new(params[:foto])
-    usuario = Usuario.find(session[:usuario])
-  	if usuario.fotos << @foto
+    #usuario = Usuario.find(session[:usuario])
+  	#if usuario.fotos << @foto
+    if @foto.save
   		flash[:notice] = "Se ha cargado correctamente tu foto"
     	redirect_to :action => 'index'
 	else

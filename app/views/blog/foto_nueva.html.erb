@@ -1,6 +1,13 @@
 <h1>Foto nueva:</h1>
 <%=form_tag({:action => :guardar_foto}, :multipart => true) do%>
 
+  
+   <p>
+	  <label for="usuario_nombre">Usuario</label>
+	  <br/>
+	  <%= text_field 'usuario', 'nombre'%>
+	</p>
+
    <p>
 	  <label for="foto_titulo">Título</label>
 	  <br/>
