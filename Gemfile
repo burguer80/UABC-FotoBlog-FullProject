@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'carrierwave'
-
+gem 'flickraw'
 
 group :development do
 	gem 'sqlite3'

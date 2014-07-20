@@ -1,8 +1,8 @@
 class BlogController < ApplicationController
   #<--valida excepto el login------------------->
-  before_filter :valida_autentificacion, :except => [:login, :index, :registro, :crear_usuario]
+  #before_filter :valida_autentificacion, :except => [:login, :index, :registro, :crear_usuario]
   #<--protege los metodos criticos------------------->
-  skip_before_filter :valida_autentificacion!, :except => [:foto_nueva, :guardar_foto]
+  #skip_before_filter :valida_autentificacion!, :except => [:foto_nueva, :guardar_foto]
   
   def index
 		@fotos = Foto.all
@@ -68,6 +68,10 @@ class BlogController < ApplicationController
        unless session[:usuario]
          redirect_to :action => "login"
        end
+end
+
+def auth
+  Foto.flickr_auth
 end
 
 end
