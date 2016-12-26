@@ -1,24 +1,34 @@
 ===UABC===
 M.T.I.C. Sergio Iván Burgueño Ochoa
 ===Proyecto de miniblog para clase==
-Ruby on Rails 3.2.11
-ruby 1.9.3p448
-SQLite
+[Herramientas RoR](https://www.youtube.com/watch?v=GuUl_WipP2A):
+  + Ruby on Rails 3.2.11
+  + Ruby 1.9.3p448
+  + SQLite
+
+
+Introducción:
+[Qué es Rails / Ruby on Rails](https://www.youtube.com/watch?v=gt2kgLebCZA):
+[Qué es Ruby](https://www.youtube.com/watch?v=QVjHTvznKXw):
+
+
+Proyecto
+  + [Diagrama del Proyecto](https://github.com/burguer80/UABC-FotoBlog-FullProject/blob/master/xtras/documentos_de_apoyo/Diagramas.pdf):
 
 01 Creando un proyecto
   + crear un proyecto en rails desde la consola (1)
-02 Configuración inicial, controlador y vistas
+02 [Configuración inicial, controlador y vistas](https://www.youtube.com/watch?v=GuUl_WipP2A):
   + routes.rb
   + Controladores (3)
   + Vistas
   + Servidor de aplicación (6)
-03 Modelo, acceso a datos
+[03 Modelo, acceso a datos](https://www.youtube.com/watch?v=8J_j2br3kCo):
   + crear un modelo (2)
   + crear base de datos (8)
   + migraciones(4)
   + consola (7)
   + impresión de datos
-04 Formularios, validaciones
+[04 Formularios, validaciones](https://www.youtube.com/watch?v=Sa-LvdLtwiE):
   + Form Helpers
   + validaciones
 05 Gemas, subir archivos
