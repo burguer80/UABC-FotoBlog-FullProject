@@ -8,7 +8,7 @@ M.T.I.C. Sergio Iván Burgueño Ochoa
 
 
 Introducción:
-![Qué es Rails / Ruby on Rails](https://www.youtube.com/watch?v=gt2kgLebCZA):
+  + [Qué es Rails / Ruby on Rails](https://www.youtube.com/watch?v=gt2kgLebCZA):
   + [Qué es Ruby](https://www.youtube.com/watch?v=QVjHTvznKXw):
 
 
