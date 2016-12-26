@@ -13,7 +13,7 @@ Introducción:
 
 
 Proyecto
-  + [Diagrama del Proyecto](https://github.com/burguer80/UABC-FotoBlog-FullProject/blob/master/xtras/documentos_de_apoyo/Diagramas.pdf):
+ [Diagrama del Proyecto](https://github.com/burguer80/UABC-FotoBlog-FullProject/blob/master/xtras/documentos_de_apoyo/Diagramas.pdf):
 
 01 Creando un proyecto
   + crear un proyecto en rails desde la consola (1)
